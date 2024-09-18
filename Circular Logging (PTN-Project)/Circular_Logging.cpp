@@ -2,18 +2,39 @@
 
 using namespace std;
 
+void Circular_Logging::readConfig(string filePath) {
+
+}
+
 void Circular_Logging::startLogCreation() {
 
 }
 
 void Circular_Logging::createLogFile() {
-	string logName = currentQuantity + ".log";
+	string strTime = currentTime();
+	string logFileName = strTime + ".log";
+	filesystem::path directoryPath = "Logs";
+	if (!exists(directoryPath)) {
+		create_directory(directoryPath);
+	}
+
+	string strFilePath = "Logs/" + logFileName;
+	filesystem::path filePath = directoryPath / logFileName;
+	ofstream logFile(filePath);
+	if (logFile.is_open()) {
+		logFile << "Log created at " + strTime;
+		logFile.close();
+		fileNames.push_back(strFilePath);
+	}
+
+	manageFileQuantity();
 }
 
 bool Circular_Logging::manageFileQuantity() {
-	int maxQuantity = defineMaxQuantity();
-	if (currentQuantity > maxQuantity) {
-
+	if (fileNames.size() > maxQuantity) {
+		filesystem::path oldestFile = fileNames.front();
+		filesystem::remove(oldestFile);
+		fileNames.erase(fileNames.begin());
 		return false;
 	}
 	else {

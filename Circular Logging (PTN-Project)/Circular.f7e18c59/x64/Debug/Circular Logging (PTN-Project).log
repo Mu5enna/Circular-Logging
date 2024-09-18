@@ -1,0 +1,50 @@
+﻿  Circular_Logging.cpp
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(12,18): error C4430: tür belirticisi eksik - int varsayıldı. Not: C++ varsayılan int desteği içermez
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(12,32): error C2146: sözdizimi hatası: ')' eksik ('filePath' tanımlayıcısından önce)
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(12,32): error C3646: 'filePath': bilinmeyen geçersiz kılma belirticisi
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(12,40): error C2059: sözdizimi hatası: ')'
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(13,31): error C4430: tür belirticisi eksik - int varsayıldı. Not: C++ varsayılan int desteği içermez
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(13,31): error C2146: sözdizimi hatası: ')' eksik ('filePath' tanımlayıcısından önce)
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(13,31): error C3646: 'filePath': bilinmeyen geçersiz kılma belirticisi
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(13,39): error C2059: sözdizimi hatası: ')'
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(20,9): error C3646: 'currentTime': bilinmeyen geçersiz kılma belirticisi
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(20,20): error C2059: sözdizimi hatası: '('
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(20,22): error C2238: ';' öncesinde beklenmeyen belirteçler
+  ('Circular_Logging.cpp' kaynak dosyası derleniyor)
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.cpp(5,19): error C2511: 'Circular_Logging::Circular_Logging(const std::string)': aşırı yüklenen üye işlev 'Circular_Logging' içinde bulunamadı
+  C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(6,7):
+  'Circular_Logging' bildirimine bakın
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.cpp(6,2): error C2664: 'void Circular_Logging::readConfig(const int)' : 1 bağımsız değişkeni 'const std::string' değerinden 'const int' değerine dönüştürülemez
+  C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.cpp(6,13):
+  Bu dönüştürmeyi gerçekleştirecek kullanıcı tanımlı dönüştürme işleci yok veya işleç çağrılamıyor
+  C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(13,7):
+  'Circular_Logging::readConfig' bildirimine bakın
+  C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.cpp(6,2):
+  '(const std::string)' bağımsız değişken listesi eşlenmeye çalışılırken
+  
+C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.cpp(28,26): error C2039: 'currentTime': bir 'Circular_Logging' üyesi değil
+  C:\Users\Eren\Documents\VSFiles\Circular Logging (PTN-Project)\Circular_Logging.h(6,7):
+  'Circular_Logging' bildirimine bakın
+  
