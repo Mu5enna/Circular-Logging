@@ -6,11 +6,13 @@
 #include <filesystem>
 #include <fstream>
 
+using namespace std;
+
 class Circular_Logging
 {
 private:
 	vector<string> fileNames;
-	int maxQuantity;
+	int maxQuantity = 3;
 	int freq;
 	bool isActive = false;
 	void readConfig(const string filePath);
@@ -19,7 +21,7 @@ public:
 	void startLogCreation();
 	void stopLogCreation() { isActive = false; }
 	void createLogFile();
-	bool manageFileQuantity();
+	void manageFileQuantity();
 	string currentTime();
 };
 

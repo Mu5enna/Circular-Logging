@@ -7,7 +7,16 @@ void Circular_Logging::readConfig(string filePath) {
 }
 
 void Circular_Logging::startLogCreation() {
-
+	filesystem::path directoryPath = "Logs";
+	if (filesystem::exists(directoryPath) && filesystem::is_directory(directoryPath)) {
+		for (const auto& entry : filesystem::directory_iterator(directoryPath)) {
+			string fileName = entry.path().string();
+			fileNames.push_back(fileName);
+		}
+	}
+	for (int i = 0; i < 10; i++) {
+		createLogFile();
+	}
 }
 
 void Circular_Logging::createLogFile() {
@@ -19,26 +28,21 @@ void Circular_Logging::createLogFile() {
 	}
 
 	string strFilePath = "Logs/" + logFileName;
-	filesystem::path filePath = directoryPath / logFileName;
+	filesystem::path filePath = strFilePath;
 	ofstream logFile(filePath);
 	if (logFile.is_open()) {
 		logFile << "Log created at " + strTime;
 		logFile.close();
 		fileNames.push_back(strFilePath);
 	}
-
 	manageFileQuantity();
 }
 
-bool Circular_Logging::manageFileQuantity() {
-	if (fileNames.size() > maxQuantity) {
+void Circular_Logging::manageFileQuantity() {
+	while (fileNames.size() > maxQuantity) {
 		filesystem::path oldestFile = fileNames.front();
 		filesystem::remove(oldestFile);
 		fileNames.erase(fileNames.begin());
-		return false;
-	}
-	else {
-		return true;
 	}
 }
 
