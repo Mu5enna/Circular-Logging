@@ -5,6 +5,7 @@
 #include <vector>
 #include <filesystem>
 #include <fstream>
+#include <thread>
 
 using namespace std;
 
@@ -12,8 +13,8 @@ class Circular_Logging
 {
 private:
 	vector<string> fileNames;
-	int maxQuantity = 3;
-	int freq;
+	int maxQuantity = 5;
+	int freq = 5;
 	bool isActive = false;
 	void readConfig(const string filePath);
 public:

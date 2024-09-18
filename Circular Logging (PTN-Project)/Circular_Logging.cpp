@@ -16,6 +16,7 @@ void Circular_Logging::startLogCreation() {
 	}
 	for (int i = 0; i < 10; i++) {
 		createLogFile();
+		this_thread::sleep_for(chrono::seconds(freq));
 	}
 }
 
