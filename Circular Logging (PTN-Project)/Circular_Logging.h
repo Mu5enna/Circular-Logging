@@ -35,6 +35,8 @@ private:
 	// Function to determine and return the current time in UTC as string
 	string currentTime();
 public:
+	// Deleting default constructor to prevent errors
+	Circular_Logging() = delete;
 	Circular_Logging(const string fileName) { readConfig(fileName); }
 	// Function to start and control the log creating process
 	void startLogCreation();
