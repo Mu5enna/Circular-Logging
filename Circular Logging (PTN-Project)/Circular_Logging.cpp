@@ -14,8 +14,9 @@ void Circular_Logging::readConfig(string fileName) {
 	calcWaitTime();
 }
 
+// Calculating wait time in seconds according to LogType and Frequency given in JSON file
 void Circular_Logging::calcWaitTime() {
-
+	
 	if (logType == "Minute") {
 		waitTime = freq * 60;
 	}
@@ -33,6 +34,7 @@ void Circular_Logging::calcWaitTime() {
 
 void Circular_Logging::startLogCreation() {
 	filesystem::path directoryPath = "Logs";
+	// Loading previous log files in directory
 	if (filesystem::exists(directoryPath) && filesystem::is_directory(directoryPath)) {
 		for (const auto& entry : filesystem::directory_iterator(directoryPath)) {
 			string fileName = entry.path().string();
@@ -55,6 +57,7 @@ void Circular_Logging::createLogFile() {
 	string strTime = currentTime();
 	string logFileName = strTime + ".log";
 	filesystem::path directoryPath = "Logs";
+	// Checking if directory
 	if (!exists(directoryPath)) {
 		create_directory(directoryPath);
 	}
