@@ -2,8 +2,32 @@
 
 using namespace std;
 
-void Circular_Logging::readConfig(string filePath) {
+void Circular_Logging::readConfig(string fileName) {
+	ifstream jsonFile("variables.json");
+	nlohmann::json j;
+	jsonFile >> j;
 
+	freq = j["Frequency"];
+	maxQuantity = j["MaxQuantity"];
+	logType = j["LogType"];
+	calcWaitTime();
+}
+
+void Circular_Logging::calcWaitTime() {
+
+	if (logType == "Minute") {
+		waitTime = freq * 60;
+	}
+	else if (logType == "Hour") {
+		waitTime = freq * 3600;
+	}
+	else if (logType == "Day") {
+		waitTime = freq * 86400;
+	}
+	//If log type is second or not valid
+	else {
+		waitTime = freq;
+	}
 }
 
 void Circular_Logging::startLogCreation() {
@@ -14,9 +38,9 @@ void Circular_Logging::startLogCreation() {
 			fileNames.push_back(fileName);
 		}
 	}
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 15; i++) {
 		createLogFile();
-		this_thread::sleep_for(chrono::seconds(freq));
+		this_thread::sleep_for(chrono::seconds(waitTime));
 	}
 }
 

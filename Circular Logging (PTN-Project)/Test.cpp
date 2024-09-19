@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	Circular_Logging cl("a.exe");
+	Circular_Logging cl("variables.json");
 	cl.startLogCreation();
 	return 0;
 }
