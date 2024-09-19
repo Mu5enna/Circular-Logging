@@ -4,5 +4,5 @@
   "_Comment": "Max log files stored",
   "MaxQuantity": 10,
   "_Comment2": "If repeat set to 0 or negative number, program runs constantly. In positive numbers, program creates that number of logs.",
-  "AmountofRepeat": 0
+  "AmountofRepeat": 2
 }
