@@ -20,6 +20,7 @@ private:
 	string logType;
 	int maxQuantity;
 	int freq;
+	// Can set this variable to a positive integer from JSON file. Default is set to 0 and works constantly
 	int repeatTime;
 	// Amount of time program waits between creating logs
 	long waitTime;

@@ -1,8 +1,9 @@
 {
-  "Frequency": 2,
+  "Frequency": 5,
+  "_Comment": "Choose between 'Day','Hour','Minute','Second'",
   "LogType": "Second",
-  "_Comment": "Max log files stored",
-  "MaxQuantity": 10,
-  "_Comment2": "If repeat set to 0 or negative number, program runs constantly. In positive numbers, program creates that number of logs.",
-  "AmountofRepeat": 2
+  "_Comment2": "Max log files stored",
+  "MaxQuantity": 5,
+  "_Comment3": "If repeat set to 0 or negative number, program runs constantly. In positive numbers, program creates that number of logs.",
+  "AmountofRepeat": 0
 }
