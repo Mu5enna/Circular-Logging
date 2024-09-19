@@ -19,6 +19,7 @@ private:
 	long waitTime;
 	int maxQuantity;
 	int freq;
+	int repeatTime;
 	bool isActive = false;
 	void readConfig(const string fileName);
 public:

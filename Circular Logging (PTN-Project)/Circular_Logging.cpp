@@ -10,6 +10,7 @@ void Circular_Logging::readConfig(string fileName) {
 	freq = j["Frequency"];
 	maxQuantity = j["MaxQuantity"];
 	logType = j["LogType"];
+	repeatTime = j["AmountofRepeat"];
 	calcWaitTime();
 }
 
@@ -38,7 +39,13 @@ void Circular_Logging::startLogCreation() {
 			fileNames.push_back(fileName);
 		}
 	}
-	for (int i = 0; i < 15; i++) {
+	for (int i = 0; i <= repeatTime; i++) {
+		if (repeatTime <= 0) {
+			--i;
+		}
+		if (i == repeatTime) {
+			continue;
+		}
 		createLogFile();
 		this_thread::sleep_for(chrono::seconds(waitTime));
 	}

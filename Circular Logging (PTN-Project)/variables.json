@@ -1,5 +1,6 @@
 {
-  "Frequency": 1,
+  "Frequency": 2,
   "LogType": "Second",
-  "MaxQuantity": 10
+  "MaxQuantity": 10,
+  "AmountofRepeat": 0
 }
